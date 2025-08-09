@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Hardware Projects & Embedded Security</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F0F4F8; /* Light grey-blue from Brilliant Blues palette */
+            color: #334155; /* Slate-700 for text */
+        }
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 0.5rem; /* Rounded corners for video */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="bg-[#00449E] text-white p-8 text-center shadow-lg">
+        <h1 class="text-4xl md:text-5xl font-black tracking-tight">Hardware Projects & Embedded Security</h1>
+        <p class="mt-2 text-xl md:text-2xl font-light">Exploring the Intersection of Physical Devices and Cybersecurity</p>
+        <div class="mt-4 text-lg">
+            <a href="cvsite.html" class="text-white hover:underline mx-2">&larr; Back to Resume</a>
+        </div>
+    </header>
+
+    <main class="container mx-auto p-4 md:p-8">
+
+        <section id="intro-embedded-security" class="mb-12">
+            <div class="bg-white rounded-lg shadow-md p-6 md:p-8">
+                <h2 class="text-3xl font-bold text-[#00449E] mb-4">The Evolving Landscape: Integrated Systems in Cybersecurity</h2>
+                <p class="text-lg leading-relaxed mb-4">
+                    The proliferation of integrated systems, microcontrollers, and small handheld devices has profoundly reshaped the cybersecurity landscape, blurring the lines between the digital and physical worlds. These devices, once niche, are now ubiquitous, powering everything from industrial control systems to everyday consumer electronics. While bringing immense convenience and automation, their widespread adoption has also introduced new attack surfaces and complex security challenges, both at large and within corporate environments.
+                </p>
+                <p class="text-lg leading-relaxed mb-4">
+                    Pivotal events and devices highlight this shift:
+                </p>
+                <ul class="list-disc list-inside space-y-2 text-lg leading-relaxed mb-6">
+                    <li>
+                        <strong>Stuxnet (2010):</strong> This sophisticated cyberweapon demonstrated the devastating potential of targeting Industrial Control Systems (ICS) and SCADA environments. It specifically exploited vulnerabilities in Siemens PLCs, causing physical damage to Iranian centrifuges by manipulating their rotational speeds. Stuxnet was a stark reminder that cyberattacks could have tangible, real-world consequences, forcing industries to re-evaluate the security of their operational technology (OT) networks.
+                    </li>
+                    <li>
+                        <strong>CAN-BUS (Controller Area Network Bus):</strong> Originally designed for robust and simple communication within vehicles, the CAN-BUS standard has become a critical component in modern cars. Its widespread availability and inherent lack of strong security mechanisms (like authentication or encryption) have opened doors for automotive cybersecurity research and, in some cases, malicious exploitation. Researchers have shown how vulnerabilities in CAN-BUS can allow remote control of vehicle functions, from braking to steering, underscoring the need for security-by-design in embedded automotive systems.
+                    </li>
+                    <li>
+                        <strong>The Flipper Zero (Modern Multi-tool):</strong> Devices like the Flipper Zero represent the democratization of hardware hacking and embedded system interaction. This portable multi-tool integrates various functionalities (Sub-GHz radio, NFC, RFID, IR, GPIO, BadUSB, etc.) into a single, user-friendly device. While primarily designed for legitimate security research and penetration testing, its accessibility also means that techniques for interacting with and potentially exploiting integrated systems are now widely available, requiring organizations to bolster their physical and wireless perimeter defenses.
+                    </li>
+                </ul>
+                <p class="text-lg leading-relaxed">
+                    These examples illustrate that cybersecurity is no longer confined to traditional IT networks. It now encompasses the physical devices that control our infrastructure, vehicles, and daily lives. Understanding and securing these integrated systems, microcontrollers, and implants is paramount for comprehensive defense in both national security and corporate cybersecurity strategies. My projects in this domain reflect a hands-on approach to tackling these critical challenges.
+                </p>
+            </div>
+        </section>
+
+        <section id="hardware-projects" class="mb-12">
+            <div class="bg-white rounded-lg shadow-md p-6 md:p-8">
+                <h2 class="text-3xl font-bold text-[#00449E] mb-6">My Current Hardware Projects</h2>
+
+                <!-- Project 1: Embedded Device Security Research -->
+                <div class="mb-10 pb-10 border-b border-gray-200 last:border-b-0 last:mb-0 last:pb-0">
+                    <h3 class="text-2xl font-semibold text-[#0065C8] mb-3">Project Title 1: Secure IoT Device Prototype</h3>
+                    <p class="text-lg leading-relaxed mb-4">
+                        This project focuses on developing a prototype IoT device with enhanced security features from the ground up. It explores secure boot mechanisms, hardware-backed cryptography, and secure firmware update processes for microcontroller-based systems.
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                        <div>
+                            <img src="https://placehold.co/600x400/88CCEE/00449E?text=Project+Image+1" alt="IoT Device Prototype" class="w-full h-auto rounded-lg shadow-md">
+                            <p class="text-sm text-gray-500 mt-2 text-center">Image: Early prototype of the secure IoT device.</p>
+                        </div>
+                        <div>
+                            <div class="video-container">
+                                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=example" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            </div>
+                            <p class="text-sm text-gray-500 mt-2 text-center">Video: Demo of secure boot process.</p>
+                        </div>
+                    </div>
+                    <ul class="list-disc list-inside mt-3 space-y-2 text-base leading-relaxed">
+                        <li><strong>Microcontroller Used:</strong> ESP32 with custom secure element.</li>
+                        <li><strong>Key Features:</strong> Hardware Root of Trust (HRoT), encrypted communication, over-the-air (OTA) firmware updates with digital signatures.</li>
+                        <li><strong>Security Focus:</strong> Mitigating common IoT vulnerabilities like insecure defaults, weak authentication, and unencrypted data transmission.</li>
+                        <li><strong>Tools & Techniques:</strong> PlatformIO, ESP-IDF, OpenSSL, custom bootloader development.</li>
+                    </ul>
+                </div>
+
+                <!-- Project 2: CAN-BUS Analysis Tool -->
+                <div class="mb-10 pb-10 border-b border-gray-200 last:border-b-0 last:mb-0 last:pb-0">
+                    <h3 class="text-2xl font-semibold text-[#0065C8] mb-3">Project Title 2: Automotive CAN-BUS Traffic Analyzer</h3>
+                    <p class="text-lg leading-relaxed mb-4">
+                        This project involves building a portable device for real-time capture and analysis of CAN-BUS traffic in automotive systems. The goal is to identify anomalous behaviors or potential injection attacks.
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                        <div>
+                            <img src="https://placehold.co/600x400/3993DD/FFFFFF?text=Project+Image+2" alt="CAN-BUS Analyzer" class="w-full h-auto rounded-lg shadow-md">
+                            <p class="text-sm text-gray-500 mt-2 text-center">Image: Custom hardware for CAN-BUS sniffing.</p>
+                        </div>
+                        <div>
+                            <div class="video-container">
+                                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=example" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            </div>
+                            <p class="text-sm text-gray-500 mt-2 text-center">Video: Live demonstration of CAN data capture.</p>
+                        </div>
+                    </div>
+                    <ul class="list-disc list-inside mt-3 space-y-2 text-base leading-relaxed">
+                        <li><strong>Hardware:</strong> Arduino/Raspberry Pi with CAN transceiver module.</li>
+                        <li><strong>Software:</strong> Python scripts for data parsing and visualization, custom firmware for hardware interface.</li>
+                        <li><strong>Analysis Capabilities:</strong> Message ID filtering, data payload decoding, anomaly detection based on message frequency/content.</li>
+                        <li><strong>Applications:</strong> Vehicle diagnostics, security research, reverse engineering of automotive systems.</li>
+                    </ul>
+                </div>
+
+                <!-- Project 3: Offensive Security Implant (Conceptual/Research) -->
+                <div class="mb-10 pb-10 border-b border-gray-200 last:border-b-0 last:mb-0 last:pb-0">
+                    <h3 class="text-2xl font-semibold text-[#0065C8] mb-3">Project Title 3: Covert Network Access Device (Research)</h3>
+                    <p class="text-lg leading-relaxed mb-4">
+                        This research project explores the capabilities and detection methods for small, low-power devices designed for covert network access in a controlled lab environment. It focuses on understanding the threat posed by physical implants and developing countermeasures.
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                        <div>
+                            <img src="https://placehold.co/600x400/0065C8/FFFFFF?text=Project+Image+3" alt="Covert Device Research" class="w-full h-auto rounded-lg shadow-md">
+                            <p class="text-sm text-gray-500 mt-2 text-center">Image: Example of a compact development board used.</p>
+                        </div>
+                        <div>
+                            <div class="video-container">
+                                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=example" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            </div>
+                            <p class="text-sm text-gray-500 mt-2 text-center">Video: Lab demo of network traffic exfiltration.</p>
+                        </div>
+                    </div>
+                    <ul class="list-disc list-inside mt-3 space-y-2 text-base leading-relaxed">
+                        <li><strong>Core Components:</strong> Microcontroller (e.g., ESP8266, custom PCB), small form factor Wi-Fi module.</li>
+                        <li><strong>Attack Vectors Explored:</strong> Network bridging, data exfiltration over unconventional channels, persistence mechanisms.</li>
+                        <li><strong>Defensive Research:</strong> Developing detection signatures for unusual network traffic patterns, physical security measures.</li>
+                        <li><strong>Ethical Considerations:</strong> Strictly for research and defensive purposes within isolated lab environments.</li>
+                    </ul>
+                </div>
+
+                <!-- Add more project sections as needed -->
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="text-center p-6 bg-[#00449E] text-white">
+        <p>&copy; 2025 Your Name. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

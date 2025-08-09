@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Cybersecurity Resume Infographic</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F0F4F8; /* Light grey-blue from Brilliant Blues palette */
+            color: #334155; /* Slate-700 for text */
+        }
+       .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+           .chart-container {
+                height: 350px;
+            }
+        }
+       .expertise-detail {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-out, padding 0.5s ease-out;
+        }
+       .expertise-detail.active {
+            max-height: 500px; /* Adjust based on expected content height */
+            padding-top: 1.5rem;
+            padding-bottom: 1.5rem;
+        }
+       .cert-card {
+            cursor: pointer;
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+       .cert-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+       .cert-card.active {
+            border-color: #0065C8; /* Medium blue border when active */
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body>
+
+    <header class="bg-[#00449E] text-white p-8 text-center shadow-lg">
+        <h1 class="text-4xl md:text-5xl font-black tracking-tight">Your Name Here</h1>
+        <p class="mt-2 text-xl md:text-2xl font-light">Cybersecurity Professional | Analyst | Engineer</p>
+        <div class="mt-4 text-lg">
+		<a href="http://192.168.10.136/gelb_cv/projects.html" target="_blank" class="text-white hover:underline mx-2"> Integrated Projects</a>  |
+            <a href="http://192.168.10.136/gelb_cv/research.html" target="_blank" class="text-white 
+            hover:underline mx-2">Interests & Research</a> |
+            <a href="http://192.168.10.136/gelb_cv/accomplish.html" target="_blank" class="text-white hover:underline mx-2">Contributions & Accomplishments -- not up yet -- </a> |
+            <a href="https://github.com/nylar357" target="_blank" class="text-white hover:underline mx-2">GitHub</a>
+        </div>
+    </header>
+
+    <main class="container mx-auto p-4 md:p-8">
+
+        <section id="about" class="mb-12">
+            <div class="bg-white rounded-lg shadow-md p-6 md:p-8">
+                <h2 class="text-3xl font-bold text-[#00449E] mb-4">About Me</h2>
+                <p class="text-lg leading-relaxed">
+                    A highly motivated and results-oriented cybersecurity professional with X years of experience in [mention key areas like network security, incident response, vulnerability management]. Passionate about safeguarding digital assets and continuously learning new techniques to counter evolving threats. Proven ability to analyze complex security challenges, implement robust solutions, and lead cross-functional teams.
+                </p>
+            </div>
+        </section>
+
+        <section id="experience" class="mb-12">
+            <div class="bg-white rounded-lg shadow-md p-6 md:p-8">
+                <h2 class="text-3xl font-bold text-[#00449E] mb-6">Career Experience</h2>
+
+                <div class="mb-8 pb-8 border-b border-gray-200 last:border-b-0 last:mb-0 last:pb-0">
+                    <h3 class="text-2xl font-semibold text-[#0065C8]">Senior Cybersecurity Analyst</h3>
+                    <p class="text-lg text-gray-700">Tech Solutions Inc. | New York, NY | Jan 2020 – Present</p>
+                    <ul class="list-disc list-inside mt-3 space-y-2 text-base leading-relaxed">
+                        <li>Led incident response efforts, reducing average detection time by 25% and containment time by 30% through improved playbooks and automation.</li>
+                        <li>Implemented and managed SIEM solutions (e.g., Splunk, Elastic Stack) for real-time threat detection and analysis across enterprise networks.</li>
+                        <li>Conducted regular vulnerability assessments and penetration tests, providing actionable recommendations to development and operations teams.</li>
+                        <li>Developed and delivered cybersecurity awareness training to over 500 employees, significantly reducing phishing susceptibility.</li>
+                    </ul>
+                </div>
+
+                <div class="mb-8 pb-8 border-b border-gray-200 last:border-b-0 last:mb-0 last:pb-0">
+                    <h3 class="text-2xl font-semibold text-[#0065C8]">Network Security Engineer</h3>
+                    <p class="text-lg text-gray-700">Global Networks Corp. | San Francisco, CA | Jun 2017 – Dec 2019</p>
+                    <ul class="list-disc list-inside mt-3 space-y-2 text-base leading-relaxed">
+                        <li>Designed, configured, and maintained firewalls, intrusion detection/prevention systems (IDPS), and VPN solutions.</li>
+                        <li>Monitored network traffic for anomalies and security breaches, utilizing tools like Wireshark and Snort.</li>
+                        <li>Assisted in the development and enforcement of network security policies and procedures.</li>
+                        <li>Collaborated with IT operations to ensure secure deployment of new infrastructure components.</li>
+                    </ul>
+                </div>
+
+                </div>
+        </section>
+
+        <section id="certifications" class="mb-12">
+            <div class="bg-white rounded-lg shadow-md p-6 md:p-8">
+                <h2 class="text-3xl font-bold text-[#00449E] mb-6">Cybersecurity Certifications & Expertise</h2>
+                <p class="text-lg mb-6">Click on a certification to explore the detailed expertise gained and techniques mastered.</p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div id="cert-cissp" class="cert-card bg-blue-50 p-6 rounded-lg border-2 border-blue-200 hover:border-" onclick="toggleExpertise('expertise-cissp', this)">
+                        <h3 class="text-xl font-bold text-[#0065C8] mb-2">CISSP</h3>
+                        <p class="text-sm text-gray-600">Certified Information Systems Security Professional</p>
+                        <p class="text-sm text-gray-600">Issued by (ISC)² | May 2023</p>
+                        <button class="mt-3 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg- hover:bg-[#0065C8] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#0065C8]">
+                            View Expertise
+                        </button>
+                    </div>
+
+                    <div id="cert-ceh" class="cert-card bg-blue-50 p-6 rounded-lg border-2 border-blue-200 hover:border-" onclick="toggleExpertise('expertise-ceh', this)">
+                        <h3 class="text-xl font-bold text-[#0065C8] mb-2">CEH</h3>
+                        <p class="text-sm text-gray-600">Certified Ethical Hacker</p>
+                        <p class="text-sm text-gray-600">Issued by EC-Council | Nov 2022</p>
+                        <button class="mt-3 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg- hover:bg-[#0065C8] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#0065C8]">
+                            View Expertise
+                        </button>
+                    </div>
+
+                    <div id="cert-comp-tia-sec" class="cert-card bg-blue-50 p-6 rounded-lg border-2 border-blue-200 hover:border-" onclick="toggleExpertise('expertise-comp-tia-sec', this)">
+                        <h3 class="text-xl font-bold text-[#0065C8] mb-2">CompTIA Security+</h3>
+                        <p class="text-sm text-gray-600">Foundational Cybersecurity Skills</p>
+                        <p class="text-sm text-gray-600">Issued by CompTIA | Aug 2021</p>
+                        <button class="mt-3 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg- hover:bg-[#0065C8] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#0065C8]">
+                            View Expertise
+                        </button>
+                    </div>
+
+                    </div>
+
+                <div id="expertise-cissp" class="expertise-detail bg-blue-50 rounded-lg border-2 border-blue-200 mt-6 p-6">
+                    <h3 class="text-2xl font-bold text-[#0065C8] mb-4">CISSP Expertise: Comprehensive Security Management</h3>
+                    <p class="text-base leading-relaxed mb-3">
+                        The CISSP certification validates deep understanding across eight domains of cybersecurity. My expertise includes:
+                    </p>
+                    <ul class="list-disc list-inside space-y-2 text-base leading-relaxed">
+                        <li><strong>Security and Risk Management:</strong> Governance, risk frameworks (NIST, ISO 27001), compliance, legal and regulatory issues.</li>
+                        <li><strong>Asset Security:</strong> Data classification, ownership, privacy, retention, and secure handling.</li>
+                        <li><strong>Security Architecture and Engineering:</strong> Secure design principles, cryptography, site and facility security, security models.</li>
+                        <li><strong>Communication and Network Security:</strong> Secure network components, communication protocols, network segmentation.</li>
+                        <li><strong>Identity and Access Management (IAM):</strong> Authentication, authorization, access control models, identity lifecycle.</li>
+                        <li><strong>Security Assessment and Testing:</strong> Vulnerability assessments, penetration testing, security audits, log analysis.</li>
+                        <li><strong>Security Operations:</strong> Incident response, disaster recovery, business continuity, forensic investigations.</li>
+                        <li><strong>Software Development Security:</strong> Secure SDLC, security testing methodologies, code review.</li>
+                    </ul>
+                </div>
+
+                <div id="expertise-ceh" class="expertise-detail bg-blue-50 rounded-lg border-2 border-blue-200 mt-6 p-6">
+                    <h3 class="text-2xl font-bold text-[#0065C8] mb-4">CEH Expertise: Ethical Hacking & Penetration Testing</h3>
+                    <p class="text-base leading-relaxed mb-3">
+                        My CEH certification demonstrates proficiency in ethical hacking methodologies and tools, covering:
+                    </p>
+                    <ul class="list-disc list-inside space-y-2 text-base leading-relaxed">
+                        <li><strong>Reconnaissance:</strong> Footprinting, scanning (Nmap, Nessus), enumeration.</li>
+                        <li><strong>Vulnerability Analysis:</strong> Identifying weaknesses in systems, networks, and applications.</li>
+                        <li><strong>System Hacking:</strong> Password cracking, privilege escalation, hiding files.</li>
+                        <li><strong>Malware Threats:</strong> Understanding viruses, worms, Trojans, ransomware, and countermeasures.</li>
+                        <li><strong>Sniffing & Social Engineering:</strong> Packet analysis, phishing, pretexting, baiting.</li>
+                        <li><strong>Denial of Service (DoS/DDoS):</strong> Attack vectors and defense mechanisms.</li>
+                        <li><strong>Session Hijacking & Web Application Hacking:</strong> SQL injection, XSS, CSRF, broken authentication.</li>
+                        <li><strong>Wireless Network Hacking:</strong> WEP/WPA cracking, rogue access points.</li>
+                        <li><strong>Cloud Security:</strong> Cloud computing threats and security controls.</li>
+                        <li><strong>IoT Security:</strong> Vulnerabilities in IoT devices and mitigation strategies.</li>
+                    </ul>
+                </div>
+
+                <div id="expertise-comp-tia-sec" class="expertise-detail bg-blue-50 rounded-lg border-2 border-blue-200 mt-6 p-6">
+                    <h3 class="text-2xl font-bold text-[#0065C8] mb-4">CompTIA Security+ Expertise: Foundational Security Principles</h3>
+                    <p class="text-base leading-relaxed mb-3">
+                        Security+ provided a strong foundation in core security concepts, including:
+                    </p>
+                    <ul class="list-disc list-inside space-y-2 text-base leading-relaxed">
+                        <li><strong>Threats, Attacks, and Vulnerabilities:</strong> Malware, social engineering, application attacks, network attacks.</li>
+                        <li><strong>Technologies and Tools:</strong> Firewalls, IDS/IPS, SIEM, endpoint protection, cryptography.</li>
+                        <li><strong>Architecture and Design:</strong> Secure network design, virtualization, cloud security basics.</li>
+                        <li><strong>Identity and Access Management:</strong> Authentication factors, access control types, account management.</li>
+                        <li><strong>Risk Management:</strong> Risk assessment, mitigation strategies, business continuity planning.</li>
+                        <li><strong>Cryptography and PKI:</strong> Hashing, encryption algorithms, digital signatures.</li>
+                        <li><strong>Incident Response:</strong> Detection, analysis, containment, eradication, recovery.</li>
+                        <li><strong>Governance, Risk, and Compliance (GRC):</strong> Policies, regulations, security awareness.</li>
+                    </ul>
+                </div>
+
+                </div>
+        </section>
+
+        <section id="skills" class="mb-12">
+            <div class="bg-white rounded-lg shadow-md p-6 md:p-8">
+                <h2 class="text-3xl font-bold text-[#00449E] mb-6">Technical Skills</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-lg">
+                    <div>
+                        <h3 class="font-semibold text-[#0065C8] mb-2">Security Tools:</h3>
+                        <ul class="list-disc list-inside space-y-1">
+                            <li>SIEM: Splunk, Elastic Stack, QRadar</li>
+                            <li>Vulnerability Scanners: Nessus, Qualys, OpenVAS</li>
+                            <li>Penetration Testing: Metasploit, Nmap, Burp Suite</li>
+                            <li>Forensics: Autopsy, Volatility Framework</li>
+                            <li>Network Analysis: Wireshark, Snort, Suricata</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-[#0065C8] mb-2">Programming & Scripting:</h3>
+                        <ul class="list-disc list-inside space-y-1">
+                            <li>Python (Automation, Scripting)</li>
+                            <li>Bash/Shell Scripting</li>
+                            <li>PowerShell</li>
+                            <li>SQL</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-[#0065C8] mb-2">Operating Systems & Platforms:</h3>
+                        <ul class="list-disc list-inside space-y-1">
+                            <li>Windows Server (Active Directory, GPO)</li>
+                            <li>Linux (Ubuntu, CentOS, Kali)</li>
+                            <li>AWS, Azure (Security Services)</li>
+                            <li>Virtualization (VMware, VirtualBox)</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-[#0065C8] mb-2">Networking:</h3>
+                        <ul class="list-disc list-inside space-y-1">
+                            <li>TCP/IP, DNS, DHCP</li>
+                            <li>Firewalls (Palo Alto, Cisco ASA)</li>
+                            <li>VPNs (IPsec, SSL VPN)</li>
+                            <li>Routing & Switching</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-[#0065C8] mb-2">Frameworks & Standards:</h3>
+                        <ul class="list-disc list-inside space-y-1">
+                            <li>NIST CSF, ISO 27001</li>
+                            <li>MITRE ATT&CK</li>
+                            <li>OWASP Top 10</li>
+                            <li>GDPR, HIPAA (Compliance)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="mb-12">
+            <div class="bg-white rounded-lg shadow-md p-6 md:p-8">
+                <h2 class="text-3xl font-bold text-[#00449E] mb-6">Education</h2>
+                <div class="mb-4">
+                    <h3 class="text-2xl font-semibold text-[#0065C8]">Master of Science in Cybersecurity</h3>
+                    <p class="text-lg text-gray-700">University Name | City, State | 2019</p>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-semibold text-[#0065C8]">Bachelor of Science in Computer Science</h3>
+                    <p class="text-lg text-gray-700">Another University | City, State | 2017</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="collaborative-research" class="mb-12">
+            <div class="bg-white rounded-lg shadow-md p-6 md:p-8">
+                <h2 class="text-3xl font-bold text-[#00449E] mb-6">Collaborative Projects & Research</h2>
+                <p class="text-lg leading-relaxed mb-6">
+                    My work extends to various open-source projects and research initiatives, often leveraging Python for automation, data collection, and security tool development. Here are some highlights from my GitHub repositories:
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-blue-50 p-6 rounded-lg border-2 border-blue-200">
+                        <h3 class="text-xl font-bold text-[#0065C8] mb-2">Specialized Web Scraping Applications</h3>
+                        <p class="text-base text-gray-700 mb-3">
+                            A key area of focus has been the development of highly specialized web scraping tools for data collection and Open-Source Intelligence (OSINT).
+                        </p>
+                        <ul class="list-disc list-inside space-y-1 text-base leading-relaxed">
+                            <li><strong>xscraper:</strong> This project, developed in collaboration, focuses on advanced web scraping techniques to extract complex data from various online sources. It's designed for flexibility and robustness in handling diverse web structures.</li>
+                            <li><strong>VulnScraper Public:</strong> A dedicated scraper for CVE (Common Vulnerabilities and Exposures) data and Hacker News, providing timely intelligence on cybersecurity vulnerabilities and industry trends.</li>
+                        </ul>
+                        <p class="mt-4">
+                            <a href="https://github.com/nylar357/xscraper.git" target="_blank" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg- hover:bg-[#0065C8] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#0065C8]">
+                                View xscraper on GitHub
+                            </a>
+                        </p>
+                    </div>
+
+                    <div class="bg-blue-50 p-6 rounded-lg border-2 border-blue-200">
+                        <h3 class="text-xl font-bold text-[#0065C8] mb-2">Cybersecurity Research & Tooling</h3>
+                        <p class="text-base text-gray-700 mb-3">
+                            Beyond web scraping, my GitHub features various projects contributing to cybersecurity research and practical tooling.
+                        </p>
+                        <ul class="list-disc list-inside space-y-1 text-base leading-relaxed">
+                            <li><strong>SSH-Snake:</strong> A fork of a self-propagating, file-less script designed for automating post-exploitation tasks like SSH private key and host discovery, demonstrating expertise in offensive security and automation.</li>
+                            <li><strong>Macropad_Custom:</strong> Custom macros for Adafruit Macropad, showcasing hardware integration and custom input device development for security operations or personal productivity.</li>
+                            <li><strong>google_genai:</strong> Integration of Google Gemini AI into the terminal, exploring the intersection of AI and command-line interfaces for various applications, including potential security analysis enhancements.</li>
+                        </ul>
+                        <p class="mt-4">
+                            <a href="https://github.com/nylar357" target="_blank" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg- hover:bg-[#0065C8] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#0065C8]">
+                                Explore My GitHub Profile
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="text-center p-6 bg-[#00449E] text-white">
+        <p>&copy; 2025 Your Name. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Chart.js boilerplate functions (included as per instructions, even if no charts are actively used)
+        const tooltipTitleCallback = (tooltipItems) => {
+            const item = tooltipItems;
+            let label = item.chart.data.labels[item.dataIndex];
+            if (Array.isArray(label)) {
+                return label.join(' ');
+            }
+            return label;
+        };
+
+        const wrapLabel = (label) => {
+            const maxLength = 16;
+            if (label.length <= maxLength) {
+                return label;
+            }
+            const words = label.split(' ');
+            const lines =;
+            let currentLine = '';
+            for (const word of words) {
+                if ((currentLine + ' ' + word).length > maxLength && currentLine.length > 0) {
+                    lines.push(currentLine);
+                    currentLine = word;
+                } else {
+                    currentLine = currentLine? currentLine + ' ' + word : word;
+                }
+            }
+            lines.push(currentLine);
+            return lines;
+        };
+
+        // Function to toggle expertise detail sections
+        function toggleExpertise(expertiseId, clickedCard) {
+            const expertiseElement = document.getElementById(expertiseId);
+            const allExpertiseElements = document.querySelectorAll('.expertise-detail');
+            const allCertCards = document.querySelectorAll('.cert-card');
+
+            // Close all other expertise sections and remove active class from all cards
+            allExpertiseElements.forEach(el => {
+                if (el.id!== expertiseId) {
+                    el.classList.remove('active');
+                }
+            });
+            allCertCards.forEach(card => {
+                card.classList.remove('active');
+            });
+
+            // Toggle the clicked expertise section
+            expertiseElement.classList.toggle('active');
+
+            // Add active class to the clicked card if its expertise section is now active
+            if (expertiseElement.classList.contains('active')) {
+                clickedCard.classList.add('active');
+            }
+        }
+    </script>
+</body>
+</html>
